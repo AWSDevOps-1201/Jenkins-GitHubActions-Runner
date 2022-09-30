@@ -32,5 +32,5 @@ inputs:
     default: "600"
   
 runs:
-  using: 'node12'
-  main: 'server/index.js'
+  using: 'node16'
+  main: 'app/index.html'
