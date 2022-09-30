@@ -7,7 +7,7 @@ jobs:
     runs-on: self-hosted
     steps:
     - name: Trigger jenkins job
-      uses: Abhilash-1201/jenkins-trigger@master
+      uses: Abhilash-1201/Jenkins-GitHubActions-Runner@master
       with:
         url: ${{ secrets.JENKINS_URL }}
         job_name: "GitHub_Job"
