@@ -32,5 +32,5 @@ inputs:
     default: "600"
   
 runs:
-  using: 'dockerfile'
+  using: 'docker'
   main: 'Dockerfile'
