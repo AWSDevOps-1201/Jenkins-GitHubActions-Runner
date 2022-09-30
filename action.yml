@@ -31,6 +31,4 @@ inputs:
     required: false
     default: "600"
   
-runs:
-  using: 'node16'
-  main: 'app/index.html'
+
