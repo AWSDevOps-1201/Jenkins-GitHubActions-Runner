@@ -33,4 +33,4 @@ inputs:
   
 runs:
   using: 'node16'
-  main: 'app/index.js'
+  main: 'server/index.js'
