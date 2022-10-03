@@ -32,5 +32,5 @@ inputs:
     default: "600"
   
 runs:
-  using: 'docker'
-  main: 'Dockerfile'
+  using: 'node12'
+  main: 'server/index.js'
