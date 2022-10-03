@@ -9,7 +9,7 @@ jobs:
       uses: Abhilash-1201/Jenkins-GitHubActions-Runner@master
       with:
         url: ${{ secrets.JENKINS_URL }}
-        job_name: "testjob"
+        job_name: "DemoJobOne"
         user_name: ${{ secrets.JENKINS_USER }}
         api_token: ${{ secrets.JENKINS_TOKEN }}
         wait: "true"
