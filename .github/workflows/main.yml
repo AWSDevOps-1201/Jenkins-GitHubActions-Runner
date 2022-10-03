@@ -7,10 +7,10 @@ jobs:
     steps:
     - name: Trigger jenkins job
       uses: Abhilash-1201/Jenkins-GitHubActions-Runner@master
-        ./
+        #./
       with:
-        command: run
-        jenkinsfile: Jenkinsfile
+        #command: run
+        #jenkinsfile: Jenkinsfile
         url: ${{ secrets.JENKINS_URL }}
         job_name: "testjob"
         user_name: ${{ secrets.JENKINS_USER }}
