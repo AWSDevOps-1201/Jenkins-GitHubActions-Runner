@@ -10,7 +10,7 @@ jobs:
         ./
       with:
         command: run
-        jenkinsfile: jenkinsfile
+        jenkinsfile: Jenkinsfile
         url: ${{ secrets.JENKINS_URL }}
         job_name: "GitHub_Job"
         user_name: ${{ secrets.JENKINS_USER }}
