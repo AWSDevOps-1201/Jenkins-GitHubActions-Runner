@@ -27,4 +27,4 @@ inputs:
   
 runs:
   using: 'jenkinsfile'
-  command: 'Jenkinsfile'
+ main: 'node16'
