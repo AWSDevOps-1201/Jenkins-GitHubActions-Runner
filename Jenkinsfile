@@ -4,7 +4,7 @@ pipeline{
     stages{
         stage('code checkout from GitHub'){
             steps{
-                git 'https://github.com/Abhilash-1201/jenkins-trigger.git'
+                git 'https://github.com/Abhilash-1201/Jenkins-GitHubActions-Runner.git'
             }
         }
         stage('Code Quality Check via SonarQube'){
@@ -16,7 +16,7 @@ pipeline{
                         -Dsonar.projectKey=nodejs \
                         -Dsonar.sources=. \
                         -Dsonar.css.node=. \
-                        -Dsonar.host.url=http://18.224.141.153:9000 \
+                        -Dsonar.host.url=http://3.129.65.102:9000 \
                         -Dsonar.login=sqp_45ce02989fc85de8d32672a99b7692996177a2aa"
                         
                     }
