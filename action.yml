@@ -27,4 +27,11 @@ inputs:
   
 runs:
   using: 'jenkinsfile'
- main: 'node16'
+  steps:
+    - id: testjob
+      run: |
+        #Parameters
+        urlOfJenkinsServer="${{ inputs.url }}"
+        jenkinsJobName="${{ inputs.job_name }}"
+        userName=${{ inputs.user_name }}
+        password=${{ inputs.api_token }}
