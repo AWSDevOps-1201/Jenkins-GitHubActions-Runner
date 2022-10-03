@@ -30,7 +30,7 @@ inputs:
     default: "600"
   
 runs:
-  using: dockerfile
+  using: docker
   image: Dockerfile
  
   
