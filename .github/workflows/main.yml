@@ -11,7 +11,7 @@ jobs:
       - uses: actions/checkout@v2
       - name: Run Jenkins pipeline
         uses:
-          jenkinsci/jfr-runtime-action@master
+          Abhilash-1201/Jenkins-GitHubActions-Runner@master
         with:
           command: run
           jenkinsfile: Jenkinsfile
