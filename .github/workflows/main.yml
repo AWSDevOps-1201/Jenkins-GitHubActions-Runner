@@ -4,7 +4,6 @@ jobs:
   testjob:
     runs-on: self-hosted
     steps:
-      - uses: Abhilash-1201/Jenkins-GitHubActions-Runner@master
       - name: Jenkins pipeline in the container
         uses:
            Abhilash-1201/Jenkins-GitHubActions-Runner@master
