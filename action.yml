@@ -31,6 +31,6 @@ inputs:
   
 runs:
   using: node16
-  entrypoint: Jenkins-GitHubActions-Runner/server/index.js
+  entrypoint: server/index.js
   
   
