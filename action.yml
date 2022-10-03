@@ -30,8 +30,8 @@ inputs:
     default: "600"
   
 runs:
-  using: node16
-  main: app/app.js 
+  using: dockerfile
+  image: Dockerfile
  
   
   
