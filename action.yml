@@ -31,8 +31,7 @@ inputs:
   
 runs:
   using: node16
-    steps:
-      ${inputs.jenkinsfile}
+  pre-entrypoint: ${inputs.jenkinsfile}
  
   
   
