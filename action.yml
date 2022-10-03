@@ -31,6 +31,6 @@ inputs:
   
 runs:
   using: node16
-  entrypoint: server/index.js
+  entrypoint: index.js
   
   
