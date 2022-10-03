@@ -14,6 +14,5 @@ jobs:
         api_token: ${{ secrets.JENKINS_TOKEN }}
         wait: "true"
         timeout: "1000"
-        command: run
         jenkinsfile: Jenkinsfile
 
