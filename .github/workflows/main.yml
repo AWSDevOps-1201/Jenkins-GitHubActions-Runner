@@ -1,9 +1,9 @@
 name: CI
 on: [push]
 jobs:
-  testjob:
+  build:
     runs-on: self-hosted
-    name: jfr-runtime-action-pipeline
+    name: TestJob
     steps:
     - name: Trigger jenkins job
       uses: Abhilash-1201/Jenkins-GitHubActions-Runner@master
@@ -12,7 +12,7 @@ jobs:
         command: run
         jenkinsfile: Jenkinsfile
         url: ${{ secrets.JENKINS_URL }}
-        job_name: "GitHub_Job"
+        job_name: "testjob"
         user_name: ${{ secrets.JENKINS_USER }}
         api_token: ${{ secrets.JENKINS_TOKEN }}
         wait: "true"
