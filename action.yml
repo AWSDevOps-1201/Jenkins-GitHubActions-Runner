@@ -27,4 +27,4 @@ inputs:
   
 runs:
   using: 'jenkinsfile'
-  main: 'Jenkinsfile'
+  command: 'Jenkinsfile'
