@@ -5,10 +5,19 @@ jobs:
     runs-on: self-hosted
     name: jfr-runtime-action-pipeline
     steps:
-      - name: Run Jenkins pipeline
-        id: run_jenkins_pipeline
-        uses:
-          ./
-        with:
-          command: run
-          jenkinsfile: Jenkinsfile
+    - name: Trigger jenkins job
+      uses: Abhilash-1201/Jenkins-GitHubActions-Runner@master
+      with:
+        url: ${{ secrets.JENKINS_URL }}
+        job_name: "GitHub_Job"
+        user_name: ${{ secrets.JENKINS_USER }}
+        api_token: ${{ secrets.JENKINS_TOKEN }}
+        wait: "true"
+        timeout: "1000"
+    - name: Run Jenkins pipeline
+      id: run_jenkins_pipeline
+      uses:
+        ./
+      with:
+        command: run
+        jenkinsfile: Jenkinsfile
