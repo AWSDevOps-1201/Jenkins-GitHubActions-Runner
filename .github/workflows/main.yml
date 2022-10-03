@@ -3,17 +3,23 @@ on: [push]
 jobs:
   build:
     runs-on: self-hosted
-    name: TestJob
+    name: jenkins-test-pipeline
     steps:
-    - name: Trigger jenkins job
-      uses: Abhilash-1201/Jenkins-GitHubActions-Runner@master
-        #./
-      with:
-        #command: run
-        #jenkinsfile: Jenkinsfile
-        url: ${{ secrets.JENKINS_URL }}
-        job_name: "testjob"
-        user_name: ${{ secrets.JENKINS_USER }}
-        api_token: ${{ secrets.JENKINS_TOKEN }}
-        wait: "true"
-        timeout: "1000"
+      - uses: Abhilash-1201/Jenkins-GitHubActions-Runner@master
+      - name : Setup Jenkins
+        uses:
+          jenkinsci/jfr-runtime-action@master
+      - name: Jenkins plugins download
+        uses:
+          jenkinsci/jfr-plugin-installation-action@master
+        with:
+          pluginstxt: plugins.txt
+      - name: Run Jenkins pipeline
+        uses:
+          jenkinsci/jfr-runtime-action@master
+        with:
+          command: run
+          jenkinsfile: Jenkinsfile
+          
+        
+        
