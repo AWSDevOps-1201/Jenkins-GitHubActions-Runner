@@ -31,7 +31,7 @@ inputs:
   
 runs:
   using: node16
-  pre-entrypoint: ${inputs.jenkinsfile}
+  main: app/app.js 
  
   
   
