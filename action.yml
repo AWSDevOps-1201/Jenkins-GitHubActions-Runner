@@ -35,3 +35,5 @@ runs:
         jenkinsJobName="${{ inputs.job_name }}"
         userName=${{ inputs.user_name }}
         password=${{ inputs.api_token }}
+        
+      shell: bash
