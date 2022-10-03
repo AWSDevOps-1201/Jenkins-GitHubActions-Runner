@@ -1,1 +1,1 @@
-FROM jenkins/jenkinsfile-runner
+FROM ubuntu
