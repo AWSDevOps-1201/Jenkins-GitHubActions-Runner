@@ -7,7 +7,7 @@ jobs:
       - uses: Abhilash-1201/Jenkins-GitHubActions-Runner@master
       - name: Jenkins pipeline in the container
         uses:
-          jenkinsci/jfr-static-image-action@master
+           Abhilash-1201/Jenkins-GitHubActions-Runner@master
         with:
           command: run
           jenkinsfile: Jenkinsfile
