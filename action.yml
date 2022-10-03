@@ -30,7 +30,7 @@ inputs:
     default: "600"
   
 runs:
-  using: docker
-  image: Dockerfile
+  using: node16
+  image: ./server/index.js
   
   
