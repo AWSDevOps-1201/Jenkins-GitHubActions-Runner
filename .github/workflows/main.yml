@@ -1,14 +1,16 @@
-on: push
-name: Jenkins single-shot master
+name: Trigger jenkins job
+on: [push]
 jobs:
-  jenkinsfile-runner-prepackaged:
+  build:
+    name: Build
     runs-on: self-hosted
     steps:
-    - uses: Abhilash-1201/Jenkins-GitHubActions-Runner@master
-    - name: jenkinsfile-runner-prepackaged
-      uses: jenkinsci/jenkinsfile-runner-github-actions/jenkinsfile-runner-prepackaged@master
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          
-        
-        
+    - name: Trigger jenkins job
+      uses: Abhilash-1201/Jenkins-GitHubActions-Runner@master
+      with:
+        url: ${{ secrets.JENKINS_URL }}
+        job_name: "testjob"
+        user_name: ${{ secrets.JENKINS_USER }}
+        api_token: ${{ secrets.JENKINS_TOKEN }}
+        wait: "true"
+        timeout: "1000"
