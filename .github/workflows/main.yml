@@ -1,7 +1,7 @@
 name: CI
 on: [push]
 jobs:
-  jfr-runtime-action-pipeline:
+  testjob:
     runs-on: self-hosted
     name: jfr-runtime-action-pipeline
     steps:
