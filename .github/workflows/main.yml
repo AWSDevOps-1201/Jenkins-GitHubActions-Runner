@@ -1,25 +1,14 @@
-name: CI
-on: [push]
+on: push
+name: Jenkins single-shot master
 jobs:
-  build:
+  jenkinsfile-runner-prepackaged:
     runs-on: self-hosted
-    name: jenkins-test-pipeline
     steps:
-      - uses: Abhilash-1201/Jenkins-GitHubActions-Runner@master
-      - name : Setup Jenkins
-        uses:
-          jenkinsci/jfr-runtime-action@master
-      - name: Jenkins plugins download
-        uses:
-          jenkinsci/jfr-plugin-installation-action@master
-        with:
-          pluginstxt: plugins.txt
-      - name: Run Jenkins pipeline
-        uses:
-          jenkinsci/jfr-runtime-action@master
-        with:
-          command: run
-          jenkinsfile: Jenkinsfile
+    - uses: Abhilash-1201/Jenkins-GitHubActions-Runner@master
+    - name: jenkinsfile-runner-prepackaged
+      uses: jenkinsci/jenkinsfile-runner-github-actions/jenkinsfile-runner-prepackaged@master
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           
         
         
