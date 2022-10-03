@@ -1,13 +1,17 @@
 name: CI
 on: [push]
 jobs:
-  testjob:
-    runs-on: self-hosted
+  jfr-runtime-action-pipeline:
+    strategy:
+      matrix:
+        os: [ ubuntu-latest, macOS-latest, windows-latest ]
+    runs-on: ${{matrix.os}}
+    name: jfr-runtime-action-pipeline
     steps:
-      - name: Jenkins pipeline in the container
+      - uses: actions/checkout@v2
+      - name: Run Jenkins pipeline
         uses:
-           Abhilash-1201/Jenkins-GitHubActions-Runner@master
+          jenkinsci/jfr-runtime-action@master
         with:
           command: run
           jenkinsfile: Jenkinsfile
-          
